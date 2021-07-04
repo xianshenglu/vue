@@ -1,0 +1,28 @@
+{
+  "name": "kugou",
+  "version": "1.0.0",
+  "description": "Kugou Implementation by Vue/React/Angular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit:angular": "cd demo/angular && npm run precommit",
+    "precommit": "npm-run-all precommit:*",
+    "postinstall": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xianshenglu/kugou.git"
+  },
+  "author": "'xianshenglu' <'xianshenglu@foxmail.com'>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xianshenglu/kugou/issues"
+  },
+  "homepage": "https://github.com/xianshenglu/kugou#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "husky": "^7.0.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

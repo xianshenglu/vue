@@ -5,15 +5,21 @@ name: Angular-PR-check
 
 on:
   pull_request:
-    types: [opened]
-    branches:
-      - master
-    paths: 
-      - "demo/angular"
+    # types: 
+    #   - opened
+    #   - reopened
+    branches: 
+      - master      
+    paths:
+      - "demo/angular/**"
       
 jobs:
   build:
     runs-on: ubuntu-18.04
+
+    defaults:
+      run:
+        working-directory: ./demo/angular
 
     strategy:
       matrix:
@@ -34,7 +40,7 @@ jobs:
         run: npm run lint
 
       - name: Unit Test
-        run: npm run test
+        run: npm run test:headless
 
       - name: EndToEnd Test
         run: npm run e2e:headless      
